@@ -19,7 +19,6 @@ from fabric_cicd import FabricWorkspace, publish_all_items, unpublish_all_orphan
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Workspace Test tersinkron langsung dengan Git (sumber repo ini), jadi tidak boleh jadi target deploy.
-# TODO: isi dengan ID workspace Test.
 SOURCE_WORKSPACE_ID = "00821748-8426-4cd3-ba81-824368c7e101"
 
 # MLExperiment dan MLModel sengaja tidak di-deploy: MLModel tidak didukung fabric-cicd,
