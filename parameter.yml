@@ -1,0 +1,18 @@
+# Parameterisasi fabric-cicd: nilai yang diganti saat deploy ke workspace Prod.
+# Key environment (PROD) harus sama dengan argumen --environment di .deploy/deploy.py.
+# Dokumentasi: https://microsoft.github.io/fabric-cicd/latest/how_to/parameterization/
+
+find_replace:
+  # TODO: ID SarailmaxLH di workspace Test (lihat di SarailmaxNB.Notebook/notebook-content.py, blok META "default_lakehouse").
+  - find_value: "35b6dcb5-a619-4d10-ae81-a6f94ab9a3e7"
+    replace_value:
+      PROD: "$items.Lakehouse.SarailmaxLH.$id"
+    item_type: "Notebook"
+    item_name: "SarailmaxNB"
+
+  # TODO: ID workspace Test (pemilik default lakehouse di SarailmaxNB).
+  - find_value: "00821748-8426-4cd3-ba81-824368c7e101"
+    replace_value:
+      PROD: "$workspace.$id"
+    item_type: "Notebook"
+    item_name: "SarailmaxNB"
