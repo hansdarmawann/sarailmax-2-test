@@ -20,7 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Workspace Test tersinkron langsung dengan Git (sumber repo ini), jadi tidak boleh jadi target deploy.
 # TODO: isi dengan ID workspace Test.
-SOURCE_WORKSPACE_ID = "TODO-ISI-ID-WORKSPACE-TEST"
+SOURCE_WORKSPACE_ID = "00821748-8426-4cd3-ba81-824368c7e101"
 
 # MLExperiment dan MLModel sengaja tidak di-deploy: MLModel tidak didukung fabric-cicd,
 # dan keduanya dibuat sendiri oleh SarailmaxNB saat dijalankan di workspace target.
