@@ -2,7 +2,8 @@
 # Key environment (PROD) harus sama dengan argumen --environment di .deploy/deploy.py.
 # Dokumentasi: https://microsoft.github.io/fabric-cicd/latest/how_to/parameterization/
 
-find_repla  # ID SarailmaxLH di workspace asal (blok META "default_lakehouse" di
+find_replace:
+  # ID SarailmaxLH di workspace asal (blok META "default_lakehouse" di
   # "AIsample - Superstore Forecast v1.2 (2).Notebook/notebook-content.py").
   # item_name tidak diisi agar berlaku untuk semua Notebook (tetap jalan jika notebook di-rename).
   - find_value: "3dda0e8a-200c-40f8-a30a-f39f4b379e13"
@@ -15,4 +16,3 @@ find_repla  # ID SarailmaxLH di workspace asal (blok META "default_lakehouse" di
     replace_value:
       PROD: "$workspace.$id"
     item_type: "Notebook"
-e: "SarailmaxNB"
